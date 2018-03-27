@@ -7,7 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  blocks: any;
+
+  constructor() {
+    this.blocks = [
+      {
+        "blockName" : "Subscriber"
+      },
+      {
+        "blockName" : "Charging"
+      },
+      {
+        "blockName" : "Promotion"
+      },
+      {
+        "blockName" : "Subordinate"
+      },
+      {
+        "blockName" : "SubscriberFaF"
+      },
+      {
+        "blockName" : "AccountFaF"
+      },
+      {
+        "blockName" : "PeriodicAccountManagement"
+      }
+    ];
+  }
 
   ngOnInit() {
   }

@@ -1,7 +1,15 @@
-<div class="row justify-content-md-center">
-  <div class="col col-lg-6">
-    <p>
-      create works!
-    </p>
-  </div>
-</div>
+<hr>
+<a class="btn btn-secondary" data-toggle="collapse" href="#createForm" role="button" aria-expanded="true" aria-controls="createForm">Create</a>
+<hr>
+<form class="collapse.show multi-collapse" id="createForm">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="blockSelect">Block</label>
+        <div class="col-sm-6">
+            <select name="block" class="form-control" id="blockSelect" [(ngModel)]="selectedValue">
+                <option *ngFor="let block of blocks" [ngValue]="block">{{block.blockName}}</option>
+              </select>
+              {{selectedValue | json}}
+        </div>
+      </div>
+      <button class="btn btn-primary">Save</button>
+</form>
