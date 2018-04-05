@@ -1,9 +1,10 @@
 .footer {
-    padding-top: 100px;
+    padding-top: 120px;
+    position: relative;
 }
 
 .bg-4 {
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 30px;
     background-color: #2f2f2f;
     color: #ffffff;

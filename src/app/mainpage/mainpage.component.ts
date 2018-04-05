@@ -43,8 +43,7 @@ export class MainpageComponent implements OnInit {
           "description": "The date and time is followed by time zone information consisting of “+” or “-” and the deviation from UTC in hours and minutes. The time difference is set by the service handling the refill barring and is not necessary the same as the SDP time difference. Example 2009-03-03T13:48:55+01:00"
         }
       ];
-
-    console.log(this.default_headers);
+      
    }
 
   ngOnInit() {

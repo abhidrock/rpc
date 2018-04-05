@@ -11,9 +11,9 @@
         <hr>
         <form class="collapse.show multi-collapse" id="defaultHeaderForm">
             <div class="form-group row"  *ngFor="let header of default_headers">
-                <label class="col-sm-2 col-form-label">{{header.fieldname}}</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder="{{header.placeholder}}" data-container="body" data-toggle="tooltip" data-html="true" data-placement="top" title="{{header.description}}">
+                <label class="col-sm-3 col-form-label">{{header.fieldname}}</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control pop" placeholder="{{header.placeholder}}" data-toggle="popover" title="{{header.fieldname}}" data-trigger="hover" [attr.data-content]="header.description">
                 </div>
             </div>
         </form>

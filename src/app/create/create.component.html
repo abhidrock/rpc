@@ -3,13 +3,21 @@
 <hr>
 <form class="collapse.show multi-collapse" id="createForm">
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label" for="blockSelect">Block</label>
-        <div class="col-sm-6">
+        <label class="col-sm-3 col-form-label" for="blockSelect">Block</label>
+        <div class="col-sm-5">
             <select name="block" class="form-control" id="blockSelect" [(ngModel)]="selectedValue">
                 <option *ngFor="let block of blocks" [ngValue]="block">{{block.blockName}}</option>
-              </select>
-              {{selectedValue | json}}
+            </select>
         </div>
-      </div>
-      <button class="btn btn-primary">Save</button>
+        <!--{{selectedValue | json}}-->
+    </div>
+    <div *ngIf="selectedValue">
+        <div class="form-group row" *ngFor="let field of selectedValue.fields">
+            <label class="col-sm-3 col-form-label">{{field.fieldName}}</label>
+            <div class="col-sm-5">
+                <input type="text" (mouseover)="initTooltip()" class="form-control pop" data-html="true" placeholder="{{field.placeholder}}" data-toggle="popover" title="{{field.fieldName}}" data-trigger="hover" [attr.data-content]="field.description">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary">Save</button>
 </form>
